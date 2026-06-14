@@ -1,0 +1,11 @@
+#title {
+    text-align: center;
+    font-size: larger;
+    font: italic;
+}
+
+#node {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+}
