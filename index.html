@@ -4,19 +4,31 @@
         <title>Baguette Simulator 2: Breader and Butter</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https:/x/pyscript.net/releases/2026.3.1/core.css"/>
-        <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+       
 
     </head>
-    <body>
+    <body id="bg">
         <header id="title">Baguette Simulator 2</header>
 
         <!--python test-->
-        <script type="py" config="./conf.json" src="./main.py"></script>
+    <div>
+        <button id="start">Play</button>
+    </div>
 
-        <div id="node">
-            
+        <div class="noodel">
+            <p>Bread Factory</p>
+            <img id="breadfactory" src="breadfactory.jpg" alt="bread in tda factory">
+            <div class="intranode">
+                <p>The Bread Factory. Generates Bread.</p>
+            </div>
+            <p id="energylevel">Cost: </p>
         </div>
+        <script src="./card.js" defer></script>
+
+    <div>
+        <button>Spawn Card</button>
+        <script src="./spawncard.js"></script>
+    </div>
         
 
         
