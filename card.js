@@ -49,9 +49,18 @@ function spawncard(){
         newcard.dataset.id = ID;
         newcard.style.position = "absolute";
         newcard.innerHTML = `
-            <p>dummy </p>
+            <p>dummy text</p>
             <div class = "intranode">
-                <p>dummytext</p>
+                <p style="padding-bottom: 20px;">dummytext</p>
+                
+                <div class = "nodeconnectors">
+                    <div class = "stack-left">
+                        <div class = "input" data-type="input"></div>
+                    </div>
+                    <div class = "stack-right">
+                        <div class = "output" data-type="output"></div>
+                    </div>
+                </div>
             </div>
             <p id="energylevel">Cost: </p>
         `;
@@ -103,7 +112,10 @@ function dragon(card) {
     });
 }
 
+function nodeconnect() {
 
+
+};
 //to detect overlay
 
 function overlapdetector(card1,card2) {
@@ -139,25 +151,6 @@ function stackcards(node1, node2){
 
 };
 
-function movestack(card,dx,dy) {
-    card.style.left = (card.offsetLeft + dx) + "px";
-    card.style.top = (card.offsetTop + dy) + "px";
-
-    const id = card.dataset.id;
-    const info = stack.get(card.dataset.id);
-
-    for (const childID of info.children) {
-
-        const childCard =
-            document.querySelector(`[data-id="${childID}"]`);
-
-        if (childCard) {
-            movestack(childCard, dx, dy);
-        };
-
-    };
-
-};
 
 document.addEventListener("mousemove", (e) => {
         if (!activecard) return;
@@ -176,8 +169,6 @@ document.addEventListener("mouseup", () => {
     for (const other of cards) {
         if (other === activecard) continue;
         if (overlapdetector(activecard, other)) {
-            stackcards(activecard, other);
-            movestack(activecard, )
             break;
         }
     };
@@ -185,6 +176,7 @@ document.addEventListener("mouseup", () => {
     activecard = null;
 });
 
+document.addEventListener("                                 ")
 
 dragon(card);
 

@@ -4,8 +4,6 @@
         <title>Baguette Simulator 2: Breader and Butter</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-       
-
     </head>
     <body id="bg">
         <header id="title">Baguette Simulator 2</header>
@@ -13,22 +11,26 @@
         <!--python test-->
     <div id="workspace">
         <button id="start">Play</button>
-    </div>
 
         <div class="noodel">
             <p>Bread Factory</p>
             <div class="intranode">
                 <p>The Bread Factory. Generates Bread.</p>
+                <div class="nodeconnectors"></div>
             </div>
             <p id="energylevel">Cost: </p>
         </div>
         <script src="./card.js" defer></script>
 
-    <div>
-        <button id="spawner">Spawn Card</button>
-        <script src="./card.js"></script>
+        <div>
+            <button id="spawner">Spawn Card</button>
+            <script src="./card.js"></script>
+        </div>
+
+    <svg id="wire"></svg>
+
     </div>
-        
+            
 
         
     </body>

@@ -64,6 +64,9 @@
 }
 
 .intranode {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
     width: 200px;
     height: 250px;
@@ -73,6 +76,38 @@
     background-color: rgb(84, 84, 84);
 
 }
+
+.nodeconnectors {
+    position: absolute;
+    border-color:#E5E5F7;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.stack-left, .stack-right {
+    display: flex;
+    gap: 10px;
+
+}
+.input, .output {
+    width: 20px;
+    height: 20px;
+    border-radius: 15%;
+    background: cadetblue;
+    bottom: 20px;
+    top:30%;
+}
+
+.output {
+    background-color: blueviolet;
+}
+
+
+
 /*for images*/
 
 #breadfactory {
@@ -81,4 +116,14 @@
     gap: 10px;
     width: 150px;
     height: auto;
+}
+
+/*for wire*/
+
+#wire {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
 }
